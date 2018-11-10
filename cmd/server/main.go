@@ -9,10 +9,16 @@ import (
 )
 
 const (
+	// Consts for determining which interface the app should run.
 	Web = "web"
+	Rest = "rest"
+	Soap = "soap"
+	Kafka = "kafka"
+	Rabbit = "rabbit"
 )
 
 var (
+	// Flags for handle command from CLI.
 	host    = pflag.String("host", "localhost", "Appointed hostname")
 	port    = pflag.String("port", "8080", "Appointed port")
 	intface = pflag.String("intface", "web", "Application opened interface")

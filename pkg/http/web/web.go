@@ -16,6 +16,7 @@ type (
 )
 
 const (
+	// viewPath is variable to locate the view directory.
 	viewPath = "../../web/view/"
 )
 
@@ -36,6 +37,7 @@ var (
 	}
 )
 
+// Web observer builder. Build functions with Option type return.
 func BuildWebObserver(opts ...Option) *WebObserver {
 	obsvr := new(WebObserver)
 	for _, fn := range opts {
@@ -46,6 +48,7 @@ func BuildWebObserver(opts ...Option) *WebObserver {
 	return obsvr
 }
 
+// WithRouter is a function to register all the routings.
 func WithRouter() Option {
 	return func(obsvr *WebObserver) error {
 		if obsvr == nil {
