@@ -10,10 +10,10 @@ import (
 
 const (
 	// Consts for determining which interface the app should run.
-	Web = "web"
-	Rest = "rest"
-	Soap = "soap"
-	Kafka = "kafka"
+	Web    = "web"
+	Rest   = "rest"
+	Soap   = "soap"
+	Kafka  = "kafka"
 	Rabbit = "rabbit"
 )
 
